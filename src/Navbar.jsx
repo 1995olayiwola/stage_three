@@ -12,8 +12,10 @@ import FormGroup from '@mui/material/FormGroup';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import {useHistory} from 'react-router-dom';
+import Parse from 'parse';
 
- function MenuAppBar() {
+const Navbar = () =>{
+  const user = Parse.User.current();
   const history = useHistory();
   const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -45,7 +47,7 @@ import {useHistory} from 'react-router-dom';
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          Photo
+          {user.get('email')}
           </Typography>
           {auth && (
             <div>
@@ -78,10 +80,7 @@ import {useHistory} from 'react-router-dom';
 history.push('/');
 handleClose()
                 }}>Home</MenuItem>
-                <MenuItem onClick={()=>{
-history.push('/');
-handleClose()
-                }}>Dashboard</MenuItem>
+               
                
                 <MenuItem onClick={()=>{
 history.push('/logout');
@@ -101,4 +100,4 @@ handleClose()
     </Box>
   );
 }
-export default MenuAppBar;
+export default Navbar;
