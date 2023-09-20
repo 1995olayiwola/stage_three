@@ -2,6 +2,7 @@ import React from 'react';
 import Parse from 'parse';
 import {useHistory} from 'react-router-dom';
 import Loading from './Loading';
+import logo from './O.png';
 
 import {
   MDBBtn,
@@ -72,7 +73,7 @@ try {
   <MDBRow className='g-0'>
 
     <MDBCol md='6'>
-      <MDBCardImage src=''/>
+      <MDBCardImage src={logo}/>
     </MDBCol>
 
     <MDBCol md='6'>
