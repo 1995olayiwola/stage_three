@@ -1,0 +1,41 @@
+/* Apply styles to the container */
+.container {
+    text-align: center;
+    margin: 100px auto;
+    max-width: 400px;
+    padding: 20px;
+    border: 2px solid #3498db;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Style the first heading */
+  .container h1:first-child {
+    font-size: 36px;
+    color: #3498db;
+  }
+  
+  /* Style the second heading (Error 404) */
+  .container h1:nth-child(2) {
+    font-size: 24px;
+    color: #e74c3c;
+  }
+  
+  /* Style the paragraphs */
+  .container p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  /* Style the link */
+  .container a {
+    text-decoration: none;
+    color: #3498db;
+    transition: color 0.3s ease;
+  }
+  
+  .container a:hover {
+    color: #e74c3c;
+  }
+  
