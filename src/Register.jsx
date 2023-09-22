@@ -35,7 +35,7 @@ e.preventDefault();
 setFormValues(async()=>{
   console.log(formValues)
   const user = new Parse.User();
-  if(formValues.password.length>8){
+  if(formValues.password.length>10){
     alert('password must not be greater than 8 characters')
   }  
  if(formValues.password.length<8){
@@ -43,6 +43,7 @@ setFormValues(async()=>{
  }else{
   user.set("password", formValues.password);
  }
+ user.set('username',formValues.email);
 
 user.set("email", formValues.email);
 
