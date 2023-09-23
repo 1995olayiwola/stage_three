@@ -3,6 +3,7 @@ import FileUpload from './FileUpload';
 import './App.css';
 import Loading from './Loading';
 import Navbar from './Navbar';
+import ImageGallery2 from './ImageGallery2';
 
 const ImageGallery=()=> {
   const [uploadedFiles, setUploadedFiles] = useState([]);
@@ -38,6 +39,7 @@ console.log(uploadedFiles);
       </div>
       
       )}
+      <ImageGallery2/>
     </div>
   );
 }
